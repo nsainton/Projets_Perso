@@ -1,0 +1,8 @@
+# Env File #
+.env
+
+# iOS Generated Folders #
+*.dSYM
+
+# Objects files #
+*.o
