@@ -41,7 +41,7 @@ $(NAME): $(OBJS) $(PROG)
 	$(CC) $(CFLAGS) $(OPT) $(GG) $(OBJS) $(PROG) -o $(NAME) \
 	&& echo -e "\e$(YELLOW)$(NAME)\e$(GREEN) successfully created\e$(RESET)"
 
-$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c | $(OBJS_DIR)
+$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c $(INCLUDES_DIR)| $(OBJS_DIR)
 	$(CC) $(CFLAGS) $(OPT) $(GG) -c $< -o $@ -I $(INCLUDES_DIR)
 
 $(OBJS_DIR):
@@ -66,3 +66,4 @@ git:
 	git push origin $(BRANCH)
 
 .PHONY: all clean fclean re
+.SILENT: 
