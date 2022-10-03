@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   structs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsainton <nsainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 12:24:42 by nsainton          #+#    #+#             */
-/*   Updated: 2022/10/03 11:24:38 by nsainton         ###   ########.fr       */
+/*   Created: 2022/10/01 20:42:30 by nsainton          #+#    #+#             */
+/*   Updated: 2022/10/03 11:13:14 by nsainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef STRUCTS_H
+# define STRUCTS_H
 
-int	main(void)
-{
-	char buf[4];
-	write(1, "Bonjour\n", 8);
-	read(0, buf, 4);
-	write(1, buf, 4);
-	return (0);
-}
+enum e_colors{
+	Red,
+	Blue,
+	Green,
+	Yellow,
+};
+
+#endif

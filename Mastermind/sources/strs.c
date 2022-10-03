@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   strs.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsainton <nsainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 12:24:42 by nsainton          #+#    #+#             */
-/*   Updated: 2022/10/03 11:24:38 by nsainton         ###   ########.fr       */
+/*   Created: 2022/10/03 10:56:34 by nsainton          #+#    #+#             */
+/*   Updated: 2022/10/03 10:59:28 by nsainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft.h"
 
-int	main(void)
+int	ft_strlen(char *str)
 {
-	char buf[4];
-	write(1, "Bonjour\n", 8);
-	read(0, buf, 4);
-	write(1, buf, 4);
-	return (0);
+	int	i;
+
+	if (str == NULL)
+		return (0);
+	i = 0;
+	while (*(str + i))
+		i ++;
+	return (i);
+}
+
+void	ft_putstr(char *str)
+{
+	if (str == NULL)
+		return ;
+	write(1, str, ft_strlen(str));
 }

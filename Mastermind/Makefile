@@ -66,4 +66,3 @@ git:
 	git push origin $(BRANCH)
 
 .PHONY: all clean fclean re
-.SILENT:
